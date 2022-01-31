@@ -11,7 +11,6 @@
 # experience.
 
 ## DEPENDENCIES ##
-# txt files have one line, no "\n" at the end
 # the arguments for the script are supplied in the order demonstrated -c -l -z
 # the letters after -l, are in lowercase
 
@@ -49,9 +48,9 @@ def add_frequencies(d, file, remove_case):
         remove_case ([bool]): [True: case is ignored, all letters are counted as lower case
         False: case is used, letters are counted according to their case]
     """
-    # open the file
-    with open(file) as f:
-        file_string = f.readlines()[0]
+    # open the file, load to a str, drop the new line \r\n at the end of each line
+    with open(file, 'r') as file:
+        file_string = file.read().replace('\r\n', '')
     
     # check if the -c option is in place, if so, change all letters to lower case
     if remove_case == True:
