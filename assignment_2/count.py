@@ -117,3 +117,10 @@ def generate_count_csv():
         d = {x:y for x,y in d.items() if y!=0}  # drop letters with zero counts
 
     return(d)
+
+if __name__ == '__main__':
+    d = generate_count_csv()  # get dict
+    
+    # print results
+    for key in d.keys():
+        print('"{}",{}'.format(key, d[key]))

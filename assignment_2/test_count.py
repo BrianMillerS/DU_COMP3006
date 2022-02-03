@@ -15,7 +15,19 @@ class TestCount(unittest.TestCase):
         d = count.generate_count_csv()  # generate the count dictionary
         self.assertEqual(len(d), 4)  # check that the dict is the correct length
         self.assertDictContainsSubset(d, {'a':37, 'b':3,'c':30,'d':18})  # check key:value pairs
+    
+    def test_c(self):
+        sys.argv = ['count.py', '-c', 'test1.txt', 'output.csv']  # simulate the command line argument
+        d = count.generate_count_csv()  # generate the count dictionary
+        self.assertEqual(len(d), 28)  # check that the dict is the correct length
+        self.assertDictContainsSubset(d, {"F":1,"I":1,"T":2,"W":1,"a":18,"c":13,"b":1,"e":28,"d":9,"g":2,"f":6,"i":18,"h":9,"k":1,"m":5,"l":15,"o":21,"n":15,"p":10,"s":14,"r":12,"u":10,"t":35,"w":4,"v":6,"y":8,"x":4,"z":1})  # check key:value pairs
 
+    def test_z(self):
+        sys.argv = ['count.py', '-z', 'test1.txt', 'output.csv']  # simulate the command line argument
+        d = count.generate_count_csv()  # generate the count dictionary
+        self.assertEqual(len(d), 26)  # check that the dict is the correct length
+        self.assertDictContainsSubset(d, {"a":18,"c":13,"b":1,"e":28,"d":9,"g":2,"f":7,"i":19,"h":9,"k":1,"j":0,"m":5,"l":15,"o":21,"n":15,"q":0,"p":10,"s":14,"r":12,"u":10,"t":37,"w":5,"v":6,"y":8,"x":4,"z":1})  # check key:value pairs
+    
     def test_cl(self):
         sys.argv = ['count.py', '-c', '-l', 'abcdABCD', 'test1.txt', 'test2.txt', 'output.csv']  # simulate the command line argument
         d = count.generate_count_csv()  # generate the count dictionary
