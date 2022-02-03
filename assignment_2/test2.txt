@@ -1,0 +1,6 @@
+3. Unit test 
+Create another file, test_count.py. This should contain the unit testing code for count.py. You do not need to unit test count_to_csv.py. Make sure to write test cases for every combination of flags.
+
+Hint: sys.argv is mutable.
+
+Note: The Unit Tests will likely run in parallel all at once, which will sometimes cause issues. I recommend first checking each test individually and seeing if they pass as expected

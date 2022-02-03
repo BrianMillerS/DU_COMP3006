@@ -1,0 +1,6 @@
+2. Write to csv file
+In a separate file called count_to_csv.py, import your count.py. This script will take an additional argument over count.py: the final argument should be the name of a csv file to which you will write the data printed. This file does not need to already exist. 
+
+For example: 
+
+python3 count_to_csv.py -z -c test1.txt test2.txt out.csv
