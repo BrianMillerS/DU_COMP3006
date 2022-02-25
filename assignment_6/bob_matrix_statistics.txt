@@ -1,0 +1,68 @@
+
+Column Name: bob
+Mean: 213.179
+Std: 119.65616807151045
+mode: 55
+Median: 213.0
+
+Column Name: bobby
+Mean: 203.879
+Std: 120.1198615556151
+mode: 156
+Median: 199.5
+
+Column Name: bobs
+Mean: 214.438
+Std: 120.27266385039316
+mode: 251
+Median: 212.5
+
+Column Name: bobino
+Mean: 211.559
+Std: 116.80115165540118
+mode: 221
+Median: 212.0
+
+Column Name: bobtube
+Mean: 212.03
+Std: 124.3733244060953
+mode: 30
+Median: 215.0
+
+Column Name: bobsicle
+Mean: 210.326
+Std: 119.76907929994434
+mode: 264
+Median: 211.0
+
+Column Name: bobslob
+Mean: 215.969
+Std: 122.14210876570674
+mode: 344
+Median: 218.0
+
+Column Name: bobboy
+Mean: 212.707
+Std: 122.21689785427023
+mode: 364
+Median: 213.0
+
+Column Name: bobb
+Mean: 204.815
+Std: 121.87988957363919
+mode: 373
+Median: 201.5
+
+Column Name: bobtacular
+Mean: 211.895
+Std: 121.96597752928754
+mode: 368
+Median: 217.0
+
+Column Names:
+['bob', 'bobby', 'bobs', 'bobino', 'bobtube', 'bobsicle', 'bobslob', 'bobboy', 'bobb', 'bobtacular']
+
+Three row sample (first 3 rows):
+[21, 8, 77, 257, 2, 39, 294, 397, 91, 316]
+[189, 52, 393, 211, 238, 258, 218, 25, 390, 67]
+[142, 159, 87, 101, 286, 50, 344, 105, 334, 395]

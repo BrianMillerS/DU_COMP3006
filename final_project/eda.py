@@ -15,6 +15,7 @@ BD_yelp_reviews = pd.read_pickle('BD_yelp_reviews.pickle')
 BD_yelp_reviews = BD_yelp_reviews.set_index('date')
 VD_yelp_reviews = VD_yelp_reviews.set_index('date')
 
+
 # PLOT: line graph, reviews per month
 plt.plot(BD_yelp_reviews['text'].resample('Q').count(), label='Blue Star Donuts')
 plt.plot(VD_yelp_reviews['text'].resample('Q').count(), label = 'Voodoo Donuts')

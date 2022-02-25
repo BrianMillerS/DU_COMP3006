@@ -17,6 +17,7 @@ BD_yelp_reviews.pickle
 
 import os
 import pandas as pd
+from langdetect import detect_langs
 from IPython.display import display
 # pd.set_option('max_columns', None)
 # pd.set_option('max_rows', None)
@@ -58,12 +59,20 @@ for file in yelp_review_files:
 VD_yelp_reviews = pd.concat(VD_chunk_outputs)
 BD_yelp_reviews = pd.concat(BD_chunk_outputs)
 
-# check the dimensions of the final dfs
-print(VD_yelp_reviews.shape)
-print(BD_yelp_reviews.shape)
+# detect the language of the text
+VD_language = [detect_langs(i) for i in VD_yelp_reviews.text]
+VD_languages = [str(i[0]).split(':')[0] for i in VD_language]
+BD_language = [detect_langs(i) for i in BD_yelp_reviews.text]
+BD_languages = [str(i[0]).split(':')[0] for i in BD_language]
+VD_yelp_reviews['language'] = VD_languages
+BD_yelp_reviews['language'] = BD_languages
 
 # save pandas dfs as pickle files
 VD_yelp_reviews.to_pickle(path='VD_yelp_reviews.pickle')
 BD_yelp_reviews.to_pickle(path='BD_yelp_reviews.pickle')
+
+# check the dimensions of the final dfs
+print(VD_yelp_reviews.shape)
+print(BD_yelp_reviews.shape)
 
 print("Script Complete.")
