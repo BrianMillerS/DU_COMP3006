@@ -8,4 +8,6 @@
 *.xlsx
 *.json
 *.pickle
-final_project/*.png
+/final_project/*.png
+/final_project/stopwords
+/final_project/yelp_dataset
