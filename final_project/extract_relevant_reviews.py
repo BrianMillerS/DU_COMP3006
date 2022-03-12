@@ -8,22 +8,16 @@ in order to conserve RAM I am doing the subsetting first and extracting only the
 reviews that I need.
 
 The 7GB files was split into 5 smaller files in order for this querry process to work. 
-Each piece is: loaded, querried, and output saved
+Each piece is: loaded, querried, and output saved.
 
 The final result of this script is two .pickle files. Each pickle file contains the reviews
 BD_yelp_reviews.pickle
 BD_yelp_reviews.pickle
 """
 
-import os
 import pandas as pd
 from langdetect import detect_langs
-from IPython.display import display
-# pd.set_option('max_columns', None)
-# pd.set_option('max_rows', None)
 
-# make sure im in the right dir
-os.chdir("/Users/brianmiller/Desktop/DU_COMP3006/final_project")
 
 # read in business name data
 yelp_companys = pd.read_json('yelp_dataset/yelp_academic_dataset_business.json', lines=True)
@@ -38,7 +32,7 @@ querry_BD = yelp_companys.loc[(yelp_companys['name']=='Blue Star Donuts'),['name
 VD_bus_IDs = querry_VD['business_id'].to_list()
 BD_bus_IDs = querry_BD['business_id'].to_list()
 
-# loop through all .json files
+# make list of all .json split files
 yelp_review_files = ["yelp_dataset/split_reviews01.json", "yelp_dataset/split_reviews02.json", "yelp_dataset/split_reviews03.json", "yelp_dataset/split_reviews04.json", "yelp_dataset/split_reviews05.json"]
 VD_chunk_outputs = []
 BD_chunk_outputs = []
