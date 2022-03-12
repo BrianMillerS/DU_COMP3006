@@ -15,9 +15,14 @@ BD_yelp_reviews.pickle
 BD_yelp_reviews.pickle
 """
 
+import os
 import pandas as pd
 from langdetect import detect_langs
+from IPython.display import display
 
+
+# make sure im in the right dir
+os.chdir("/Users/brianmiller/Desktop/DU_COMP3006/final_project")
 
 # read in business name data
 yelp_companys = pd.read_json('yelp_dataset/yelp_academic_dataset_business.json', lines=True)
